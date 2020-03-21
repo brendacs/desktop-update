@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 /* imports */
-@import url('https://fonts.googleapis.com/css?family=Sen|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 @import "./assets/scss/variables-mac";
 
 /* reset */
@@ -75,4 +75,10 @@ table {
 }
 
 /* globals */
+h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: default;
+}
 </style>

@@ -1,12 +1,27 @@
 <template>
   <div class="desktop">
-
+    <div class="files">
+      <DesktopFolder title="Education"/>
+      <DesktopFolder title="Experience"/>
+      <DesktopFolder title="Projects"/>
+      <DesktopFolder title="Documents"/>
+    </div>
+    <div class="dock">
+      <DesktopDock/>
+    </div>
   </div>
 </template>
 
 <script>
+import DesktopFolder from './components/DesktopFolder.vue'
+import DesktopDock from './components/DesktopDock.vue'
+
 export default {
-  name: 'MacDesktop'
+  name: 'MacDesktop',
+  components: {
+    DesktopFolder,
+    DesktopDock
+  }
 }
 </script>
 
@@ -17,11 +32,20 @@ export default {
 .desktop {
   width: 100vw;
   height: 100vh;
-  background: url('../../../assets/images/lakeside_wallpaper.jpg');
+  background: url('./images/lakeside_wallpaper.jpg');
   background-size: cover;
+}
+
+.files {
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.dock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 </style>
