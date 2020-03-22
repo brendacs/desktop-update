@@ -1,8 +1,6 @@
 <template>
   <div class="dock">
-    <DockIcon name="Finder"/>
-    <DockIcon name="Sublime"/>
-    <DockIcon name="Terminal"/>
+    <DockIcon v-for="app in apps" :key="app.id" v-on:icon-click="$emit('icon-click', app.id)" :name="app.name"/>
   </div>
 </template>
 
@@ -13,13 +11,14 @@ export default {
   name: 'DesktopDock',
   components: {
     DockIcon
-  }
+  },
+  props: ['apps']
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
-@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/variables-mac",
+        "../../../../assets/scss/mixins";
 
 .dock {
   height: 60px;

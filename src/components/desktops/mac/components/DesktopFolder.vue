@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop-icon-container">
+  <div @click="$emit('folder-click', 'finder', title)" class="desktop-icon-container">
     <img class="desktop-icon" src="../images/directory.png" /><p>{{title}}</p>
   </div>
 </template>

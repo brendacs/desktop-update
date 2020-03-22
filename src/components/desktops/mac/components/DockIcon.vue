@@ -2,7 +2,9 @@
   <div class="dock-icon-container">
     <p class="dock-icon-label">{{name}}</p>
     <div class="label-triangle"></div>
-    <a class="dock-icon-link"><img class="dock-icon" :src="getIcon()"/></a>
+    <a @click="$emit('icon-click')" class="dock-icon-link">
+      <img class="dock-icon" :src="getIcon()"/>
+    </a>
   </div>
 </template>
 
@@ -32,9 +34,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
-@import "../../../../assets/scss/mixins";
-
+@import "../../../../assets/scss/variables-mac",
+        "../../../../assets/scss/mixins";
 
 .dock-icon-container {
   height: 50px;

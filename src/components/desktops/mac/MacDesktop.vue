@@ -1,13 +1,12 @@
 <template>
   <div class="desktop">
-    <div class="files">
-      <DesktopFolder title="Education"/>
-      <DesktopFolder title="Experience"/>
-      <DesktopFolder title="Projects"/>
-      <DesktopFolder title="Documents"/>
+    <div class="folders">
+      <DesktopFolder v-for="(folder, index) in folders" :key="index" v-on:folder-click="openApp" :title="folder"/>
     </div>
+    <DraggableWindow v-for="app in apps" :key="app.id" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
+    </DraggableWindow>
     <div class="dock">
-      <DesktopDock/>
+      <DesktopDock v-on:icon-click="openApp" :apps="apps"/>
     </div>
   </div>
 </template>
@@ -15,12 +14,32 @@
 <script>
 import DesktopFolder from './components/DesktopFolder.vue'
 import DesktopDock from './components/DesktopDock.vue'
+import DraggableWindow from '../../layout/DraggableWindow.vue'
 
 export default {
   name: 'MacDesktop',
   components: {
     DesktopFolder,
-    DesktopDock
+    DesktopDock,
+    DraggableWindow
+  },
+  data() {
+    return {
+      apps: [
+        {id: 'finder', name: 'Finder'},
+        {id: 'sublime', name: 'Sublime', title: 'Sublime'},
+        {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'}
+      ],
+      currentApp: null,
+      currentFolder: 'Education',
+      folders: ['Education', 'Experience', 'Projects', 'Documents']
+    }
+  },
+  methods: {
+    openApp(app, folder='Education') {
+      this.currentApp = app;
+      this.currentFolder = folder;
+    }
   }
 }
 </script>
@@ -37,7 +56,7 @@ export default {
   background-size: cover;
 }
 
-.files {
+.folders {
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
