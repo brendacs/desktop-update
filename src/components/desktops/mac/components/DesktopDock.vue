@@ -27,6 +27,7 @@ export default {
   background-color: $mac-highlight-color;
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-left: 4vw;
   border-radius: 5px 5px 0 0;
   z-index: 999;

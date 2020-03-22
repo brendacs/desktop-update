@@ -32,7 +32,8 @@ export default {
 .desktop {
   width: 100vw;
   height: 100vh;
-  background: url('./images/lakeside_wallpaper.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+              url('./images/lakeside-wallpaper.jpg');
   background-size: cover;
 }
 

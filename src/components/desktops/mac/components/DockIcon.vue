@@ -42,6 +42,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
   &:hover .dock-icon-label {
@@ -59,7 +60,8 @@ export default {
 
 .dock-icon {
   @include short-transition;
-  width: 42px;
+  height: 40px;
+  width: auto;
 
   &:active {
     filter: brightness(50%);
@@ -67,35 +69,21 @@ export default {
 }
 
 .dock-icon-label {
-  margin-top: -34px;
+  margin-top: -46px;
   visibility: hidden;
-  width: 110px;
+  width: 70px;
   background-color: $mac-label-color;
   border-radius: 5px;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
   padding: 2px 5px;
   color: $mac-label-font-color;
 }
 
 .label-triangle {
-  margin-top: -24px;
-  margin-bottom: 14px;
+  margin-top: -36px;
+  margin-bottom: 24px;
   border: 5px solid $mac-label-color;
   transform: rotate(45deg);
   visibility: hidden;
-}
-
-.finder-icon {
-  margin-top: 2px;
-}
-
-.sublime-icon, .terminal-icon {
-  width: 43px;
-  filter: brightness(90%);
-}
-
-.terminal-icon {
-  margin-top: 1px;
-  width: 44px;
 }
 </style>
