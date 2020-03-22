@@ -1,7 +1,7 @@
 <template>
   <div class="window-nav">
     <div class="window-button-container">
-      <a class="window-button button-close"></a>
+      <a @click="$emit('close-window')" class="window-button button-close"></a>
       <a class="window-button button-min"></a>
       <a class="window-button button-expand"></a>
     </div>

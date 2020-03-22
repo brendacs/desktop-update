@@ -72,6 +72,7 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
+  user-select: none;
 }
 
 /* globals */

@@ -1,18 +1,22 @@
 <template>
-  <div :class="`window ${name.toLowerCase()}-window ${!show && 'hide'}`">
-    <WindowNavigation :title="title"/>
-    <slot></slot>
-  </div>
+  <VueDraggable :resizable="false" drag-handle=".window-nav">
+    <div :class="`window ${name.toLowerCase()}-window ${!show && 'hide'}`">
+      <WindowNavigation v-on:close-window="$emit('close-window')" :title="title"/>
+      <slot></slot>
+    </div>
+  </VueDraggable>
 </template>
 
 <script>
+import VueDraggable from 'vue-draggable-resizable'
 import WindowNavigation from './WindowNavigation'
 
 export default {
   name: 'DraggableWindow',
   props: ['name', 'show', 'title'],
   components: {
-    WindowNavigation
+    WindowNavigation,
+    VueDraggable
   }
 }
 </script>
@@ -70,5 +74,10 @@ export default {
     width: 100vw;
     border-radius: 0;
   }
+}
+
+.draggable.vdr {
+  height: 0 !important;
+  width: 0 !important;
 }
 </style>

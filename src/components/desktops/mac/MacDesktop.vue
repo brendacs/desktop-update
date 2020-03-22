@@ -3,7 +3,7 @@
     <div class="folders">
       <DesktopFolder v-for="(folder, index) in folders" :key="index" v-on:folder-click="openApp" :title="folder"/>
     </div>
-    <DraggableWindow v-for="app in apps" :key="app.id" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
+    <DraggableWindow v-for="app in apps" :key="app.id" v-on:close-window="currentApp = null" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
     </DraggableWindow>
     <div class="dock">
       <DesktopDock v-on:icon-click="openApp" :apps="apps"/>
