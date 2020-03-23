@@ -1,9 +1,9 @@
 <template>
   <div class="window-nav">
     <div class="window-button-container">
-      <a @click="$emit('close-window')" class="window-button button-close"></a>
-      <a class="window-button button-min"></a>
-      <a class="window-button button-expand"></a>
+      <a @click="$emit('close-window')" class="window-button button-close"><p>x</p></a>
+      <a class="window-button button-min"><p>-</p></a>
+      <a class="window-button button-expand"><p>+</p></a>
     </div>
     <div class="window-title-container">
       <p>{{title}}</p>
@@ -38,6 +38,12 @@ export default {
   flex-direction: row;
   padding: 5px;
 
+  &:hover {
+    .window-button p {
+      display: inline;
+    }
+  }
+
   .window-button {
     color: $mac-label-font-color;
     border-width: 0;
@@ -45,12 +51,21 @@ export default {
     width: 13px;
     height: 13px;
     margin-left: 8px;
-    cursor: pointer;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      display: none;
+      font-weight: bold;
+    }
   }
 
   .button-close {
     background-color: $mac-close-button;
     border: 1px solid $mac-close-button-border;
+    color: darken($mac-close-button, 45%);
     transition: all 0.2s ease;
 
     &:hover {
@@ -61,6 +76,7 @@ export default {
   .button-min {
     background-color: $mac-min-button;
     border: 1px solid $mac-min-button-border;
+    color: darken($mac-min-button, 45%);
     transition: all 0.2s ease;
 
     &:hover {
@@ -71,6 +87,7 @@ export default {
   .button-expand {
     background-color: $mac-expand-button;
     border: 1px solid $mac-expand-button-border;
+    color: darken($mac-expand-button, 45%);
     transition: all 0.2s ease;
 
     &:hover {
@@ -93,6 +110,10 @@ export default {
 @media screen and (max-width: 1024px) {
   .window-nav {
     border-radius: 0;
+  }
+
+  .window-button p {
+    margin-top: -2px;
   }
 }
 </style>

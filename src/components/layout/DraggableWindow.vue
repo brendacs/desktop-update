@@ -45,7 +45,7 @@ export default {
   width: 100vw;
 }
 
-.finder-window, .terminal-window {
+.finder-window, .terminal-window, .sublime-window {
   top: 10vh;
   left: 20vw;
   height: 70vh;
@@ -54,16 +54,13 @@ export default {
 
 .sublime-window, .terminal-window {
   background-color: black;
+  top: 12vh;
+  left: 22vw;
 }
 
 .sublime-window {
-  top: 5vh;
-  left: 10vw;
-}
-
-.terminal-window {
-  top: 15vh;
-  left: 25vw;
+  height: 85vh;
+  width: 70vw;
 }
 
 @media screen and (max-width: 1024px) {
