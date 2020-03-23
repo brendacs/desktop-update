@@ -4,6 +4,7 @@
       <DesktopFolder v-for="(folder, index) in folders" :key="index" v-on:folder-click="openApp" :title="folder"/>
     </div>
     <DraggableWindow v-for="app in apps" :key="app.id" v-on:close-window="currentApp = null" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
+      <FinderApp/>
     </DraggableWindow>
     <div class="dock">
       <DesktopDock v-on:icon-click="openApp" :apps="apps"/>
@@ -15,13 +16,15 @@
 import DesktopFolder from './components/DesktopFolder.vue'
 import DesktopDock from './components/DesktopDock.vue'
 import DraggableWindow from '../../layout/DraggableWindow.vue'
+import FinderApp from '../../apps/finder/FinderApp'
 
 export default {
   name: 'MacDesktop',
   components: {
     DesktopFolder,
     DesktopDock,
-    DraggableWindow
+    DraggableWindow,
+    FinderApp
   },
   data() {
     return {

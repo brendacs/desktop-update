@@ -1,0 +1,23 @@
+{
+  "outer": {
+    "folder": {
+      "id": "",
+      "name": "",
+      "image": ""
+    }
+  },
+  "inner": {
+    "item": {
+      "id": "",
+      "name": "",
+      "image": "",
+      "heading": "",
+      "subtitle": "",
+      "date": "",
+      "description": "",
+      "link": "",
+      "github": "",
+      "website": ""
+    }
+  }
+}
