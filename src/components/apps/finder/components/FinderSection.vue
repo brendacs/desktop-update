@@ -1,24 +1,37 @@
 <template>
     <div class="finder-file-container content-container">
-      <div v-for="(section, index) in sections" :key="index" class="finder-section finder-outer-directory-list-container finder-section-border">
-        <FinderItem/>
+      <div class="finder-section finder-outer-directory-list-container">
+        <FinderItem v-on:item-click="selectFinderItem" v-for="(folder, key) in finderData.folders" :key="key" :finderItem="folder" type="folder" :currentFolder="currentFolder"/>
+      </div>
+      <div class="finder-section finder-inner-items-list-container">
+        <FinderItem v-on:item-click="selectFinderItem" v-for="(item, key) in finderData.items[currentFolder.toLowerCase()]" :key="key" :finderItem="item" type="item" :currentItem="currentItem"/>
       </div>
     </div>
 </template>
 
 <script>
 import FinderItem from './FinderItem'
-import items from '../data/items.json'
+import finderData from '../data/finderData.json'
 
 export default {
   name: 'FinderSection',
   components: {
     FinderItem
   },
+  props: ['currentFolder'],
   data() {
     return {
-      items: items,
-      sections: ['outer', 'inner', 'description']
+      currentItem: null,
+      finderData: finderData
+    }
+  },
+  methods: {
+    selectFinderItem(type, finderItem) {
+      if (type === 'folder') {
+        this.$emit('item-click', finderItem);
+      } else if (type === 'item') {
+        this.currentItem = finderItem.id;
+      }
     }
   }
 }
@@ -38,6 +51,7 @@ export default {
 .finder-section {
   height: 100%;
   width: 30%;
+  border-right: 1px solid $mac-titlebar-color-border;
   padding: 2px 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -48,7 +62,17 @@ export default {
   border-right: none;
 }
 
-.finder-section-border {
-  border-right: 1px solid $mac-titlebar-color-border;
+@media screen and (max-width: 650px) {
+  .finder-section {
+    width: 50%;
+  }
+
+  .finder-section:last-child {
+    display: none;
+  }
+
+  .finder-selected-item {
+    display: none;
+  }
 }
 </style>

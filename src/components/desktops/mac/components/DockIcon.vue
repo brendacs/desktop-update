@@ -3,33 +3,15 @@
     <p class="dock-icon-label">{{name}}</p>
     <div class="label-triangle"></div>
     <a @click="$emit('icon-click')" class="dock-icon-link">
-      <img class="dock-icon" :src="getIcon()"/>
+      <img class="dock-icon" :src="require(`../images/${name.toLowerCase()}.png`)"/>
     </a>
   </div>
 </template>
 
 <script>
-import finder from '../images/finder.png';
-import sublime from '../images/sublime.png';
-import terminal from '../images/terminal.png';
-
 export default {
   name: 'DockIcon',
-  props: ['name'],
-  data() {
-    return {
-      getIcon: () => {
-        switch (this.name) {
-          case 'Finder':
-            return finder;
-          case 'Sublime':
-            return sublime;
-          case 'Terminal':
-            return terminal;
-        }
-      }
-    }
-  }
+  props: ['name']
 }
 </script>
 

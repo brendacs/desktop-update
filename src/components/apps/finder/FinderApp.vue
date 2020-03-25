@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FinderSection/>
+    <FinderSection v-on:item-click="(folder) => this.$emit('item-click', folder)" :currentFolder="currentFolder"/>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
   name: 'FinderApp',
   components: {
     FinderSection
-  }
+  },
+  props: ['currentFolder']
 }
 </script>
 

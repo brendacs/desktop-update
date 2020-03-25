@@ -1,0 +1,334 @@
+{
+  "folders": {
+    "education": {
+      "id": "education",
+      "name": "Education",
+      "image": "directory.png"
+    },
+    "experience": {
+      "id": "experience",
+      "name": "Experience",
+      "image": "directory.png"
+    },
+    "projects": {
+      "id": "projects",
+      "name": "Projects",
+      "image": "directory.png"
+    },
+    "documents": {
+      "id": "documents",
+      "name": "Documents",
+      "image": "directory.png"
+    }
+  },
+  "items": {
+    "education": {
+      "hs": {
+        "id": "hs",
+        "name": "Burton High School.jpg",
+        "image": "burton.jpg",
+        "heading": "Burton High School.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "college": {
+        "id": "college",
+        "name": "UC Berkeley.jpg",
+        "image": "berkeley.jpg",
+        "heading": "UC Berkeley.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "major": {
+        "id": "major",
+        "name": "Cognitive Science Major.pdf",
+        "image": "pdf-file.png",
+        "heading": "Cognitive Science Major.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      }
+    },
+    "experience": {
+      "adobe": {
+        "id": "hs",
+        "name": "Adobe.jpg",
+        "image": "adobe.jpg",
+        "heading": "Adobe.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "climate": {
+        "id": "climate",
+        "name": "The Climate Corporation.jpg",
+        "image": "climate.jpg",
+        "heading": "The Climate Corporation.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "stowk": {
+        "id": "stowk",
+        "name": "Stowk.jpg",
+        "image": "stowk.jpg",
+        "heading": "Stowk.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "registria": {
+        "id": "registria",
+        "name": "Registria.png",
+        "image": "registria.png",
+        "heading": "Registria.png",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "wdd": {
+        "id": "wdd",
+        "name": "Web Design DeCal.jpg",
+        "image": "wdd-class.jpg",
+        "heading": "Web Design DeCal.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "aaa": {
+        "id": "aaa",
+        "name": "Asian American Association.jpg",
+        "image": "aaa.jpg",
+        "heading": "Asian American Association.jpg",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "ffl": {
+        "id": "ffl",
+        "name": "Foundation for Letters.pdf",
+        "image": "pdf-file.png",
+        "heading": "Foundation for Letters.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      }
+    },
+    "projects": {
+      "brendacs": {
+        "id": "brendacs",
+        "name": "brendacs.dev",
+        "image": "file.png",
+        "heading": "brendacs.dev",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "desktop": {
+        "id": "desktop",
+        "name": "Desktop.vue",
+        "image": "file.png",
+        "heading": "Desktop.vue",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "stopbot": {
+        "id": "stopbot",
+        "name": "Discord Stop Bot.js",
+        "image": "file.png",
+        "heading": "Discord Stop Bot.js",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "da": {
+        "id": "da",
+        "name": "Devil's Advocate.html",
+        "image": "file.png",
+        "heading": "Devil's Advocate.html",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "refero": {
+        "id": "refero",
+        "name": "Referobot.js",
+        "image": "file.png",
+        "heading": "Referobot.js",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "liquefy": {
+        "id": "liquefy",
+        "name": "Liquefy Web App.js",
+        "image": "file.png",
+        "heading": "Liquefy Web App.js",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "rolley": {
+        "id": "rolley",
+        "name": "Rolley.py",
+        "image": "file.png",
+        "heading": "Rolley.py",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "csch": {
+        "id": "csch",
+        "name": "CS Career Hackers.html",
+        "image": "file.png",
+        "heading": "CS Career Hackers.html",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "perks": {
+        "id": "perks",
+        "name": "Perks.Guide Redesign.js",
+        "image": "file.png",
+        "heading": "Perks.Guide Redesign.js",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "news": {
+        "id": "news",
+        "name": "Newsworthy New Tab.css",
+        "image": "file.png",
+        "heading": "Newsworthy New Tab.css",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      }
+    },
+    "documents": {
+      "resume": {
+        "id": "resume",
+        "name": "Resume.pdf",
+        "image": "pdf-file.png",
+        "heading": "Resume.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "about": {
+        "id": "about",
+        "name": "About.pdf",
+        "image": "pdf-file.png",
+        "heading": "About.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "monkmode": {
+        "id": "monkmode",
+        "name": "Monk Mode.pdf",
+        "image": "pdf-file.png",
+        "heading": "Monk Mode.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "notion": {
+        "id": "notion",
+        "name": "Notion Board.pdf",
+        "image": "pdf-file.png",
+        "heading": "Notion Board.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      },
+      "quotes": {
+        "id": "quotes",
+        "name": "Quotes.pdf",
+        "image": "pdf-file.png",
+        "heading": "Quotes.pdf",
+        "subtitle": "",
+        "date": "",
+        "description": "",
+        "link": "",
+        "github": "",
+        "website": ""
+      }
+    }
+  }
+}

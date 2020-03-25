@@ -4,7 +4,7 @@
       <DesktopFolder v-for="(folder, index) in folders" :key="index" v-on:folder-click="openApp" :title="folder"/>
     </div>
     <DraggableWindow v-for="app in apps" :key="app.id" v-on:close-window="currentApp = null" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
-      <FinderApp/>
+      <FinderApp v-on:item-click="(folder) => currentFolder = folder.name" :currentFolder="currentFolder"/>
     </DraggableWindow>
     <div class="dock">
       <DesktopDock v-on:icon-click="openApp" :apps="apps"/>
@@ -39,9 +39,9 @@ export default {
     }
   },
   methods: {
-    openApp(app, folder='Education') {
+    openApp(app, folder) {
       this.currentApp = app;
-      this.currentFolder = folder;
+      this.currentFolder = folder || this.currentFolder;
     }
   }
 }
