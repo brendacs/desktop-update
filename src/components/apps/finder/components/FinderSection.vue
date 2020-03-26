@@ -1,14 +1,3 @@
-<template>
-    <div class="finder-file-container content-container">
-      <div class="finder-section finder-outer-directory-list-container">
-        <FinderItem v-on:item-click="selectFinderItem" v-for="(folder, key) in finderData.folders" :key="key" :finderItem="folder" type="folder" :currentFolder="currentFolder"/>
-      </div>
-      <div class="finder-section finder-inner-items-list-container">
-        <FinderItem v-on:item-click="selectFinderItem" v-for="(item, key) in finderData.items[currentFolder.toLowerCase()]" :key="key" :finderItem="item" type="item" :currentItem="currentItem"/>
-      </div>
-    </div>
-</template>
-
 <script>
 import FinderItem from './FinderItem'
 import finderData from '../data/finderData.json'
@@ -18,7 +7,12 @@ export default {
   components: {
     FinderItem
   },
-  props: ['currentFolder'],
+  props: {
+    currentFolder: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       currentItem: null,
@@ -36,6 +30,31 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="finder-file-container content-container">
+    <div class="finder-section finder-outer-directory-list-container">
+      <FinderItem
+        v-for="(folder, key) in finderData.folders"
+        :key="key"
+        :current-folder="currentFolder"
+        :finder-item="folder"
+        type="folder"
+        @item-click="selectFinderItem"
+      />
+    </div>
+    <div class="finder-section finder-inner-items-list-container">
+      <FinderItem
+        v-for="(item, key) in finderData.items[currentFolder.toLowerCase()]"
+        :key="key"
+        :current-item="currentItem"
+        :finder-item="item"
+        type="item"
+        @item-click="selectFinderItem"
+      />
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @import "../../../../assets/scss/variables-mac";

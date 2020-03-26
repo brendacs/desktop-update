@@ -1,28 +1,14 @@
-<template>
-  <div class="desktop">
-    <div class="folders">
-      <DesktopFolder v-for="(folder, index) in folders" :key="index" v-on:folder-click="openApp" :title="folder"/>
-    </div>
-    <DraggableWindow v-for="app in apps" :key="app.id" v-on:close-window="currentApp = null" :name="app.name" :title="app.title || currentFolder" :show="currentApp === app.id">
-      <FinderApp v-on:item-click="(folder) => currentFolder = folder.name" :currentFolder="currentFolder"/>
-    </DraggableWindow>
-    <div class="dock">
-      <DesktopDock v-on:icon-click="openApp" :apps="apps"/>
-    </div>
-  </div>
-</template>
-
 <script>
-import DesktopFolder from './components/DesktopFolder.vue'
 import DesktopDock from './components/DesktopDock.vue'
+import DesktopFolder from './components/DesktopFolder.vue'
 import DraggableWindow from '../../layout/DraggableWindow.vue'
 import FinderApp from '../../apps/finder/FinderApp'
 
 export default {
   name: 'MacDesktop',
   components: {
-    DesktopFolder,
     DesktopDock,
+    DesktopFolder,
     DraggableWindow,
     FinderApp
   },
@@ -46,6 +32,38 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="desktop">
+    <div class="folders">
+      <DesktopFolder
+        v-for="(folder, index) in folders"
+        :key="index"
+        :title="folder"
+        @folder-click="openApp"
+      />
+    </div>
+    <DraggableWindow
+      v-for="app in apps"
+      :key="app.id"
+      :name="app.name"
+      :show="currentApp === app.id"
+      :title="app.title || currentFolder"
+      @close-window="currentApp = null"
+    >
+      <FinderApp
+        :current-folder="currentFolder"
+        @item-click="(folder) => currentFolder = folder.name"
+      />
+    </DraggableWindow>
+    <div class="dock">
+      <DesktopDock
+        :apps="apps"
+        @icon-click="openApp"
+      />
+    </div>
+  </div>
+</template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>

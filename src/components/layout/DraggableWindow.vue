@@ -1,25 +1,44 @@
-<template>
-  <VueDraggable :resizable="false" drag-handle=".window-nav">
-    <div :class="`window ${name.toLowerCase()}-window ${!show && 'hide'}`">
-      <WindowNavigation v-on:close-window="$emit('close-window')" :title="title"/>
-      <slot></slot>
-    </div>
-  </VueDraggable>
-</template>
-
 <script>
 import VueDraggable from 'vue-draggable-resizable'
 import WindowNavigation from './WindowNavigation'
 
 export default {
   name: 'DraggableWindow',
-  props: ['name', 'show', 'title'],
   components: {
-    WindowNavigation,
-    VueDraggable
+    VueDraggable,
+    WindowNavigation
+  },
+  props: {
+    name: {
+      type: String,
+      default: ''
+    },
+    show: {
+      type: Boolean,
+      default: false
+    },
+    title: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>
+
+<template>
+  <VueDraggable
+    drag-handle=".window-nav"
+    :resizable="false"
+  >
+    <div :class="`window ${name.toLowerCase()}-window ${!show && 'hide'}`">
+      <WindowNavigation
+        :title="title"
+        @close-window="$emit('close-window')"
+      />
+      <slot />
+    </div>
+  </VueDraggable>
+</template>
 
 <style lang="scss" scoped>
 @import "../../assets/scss/variables-mac",

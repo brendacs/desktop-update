@@ -1,9 +1,3 @@
-<template>
-  <div id="app">
-    <MacDesktop/>
-  </div>
-</template>
-
 <script>
 import MacDesktop from './components/desktops/mac/MacDesktop.vue'
 
@@ -14,6 +8,12 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div id="app">
+    <MacDesktop />
+  </div>
+</template>
 
 <style lang="scss">
 /* imports */

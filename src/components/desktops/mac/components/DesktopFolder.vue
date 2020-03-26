@@ -1,15 +1,26 @@
-<template>
-  <div @click="$emit('folder-click', 'finder', title)" class="desktop-icon-container">
-    <img class="desktop-icon" src="../images/directory.png" /><p>{{title}}</p>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'DesktopFolder',
-  props: ['title']
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
+
+<template>
+  <div
+    class="desktop-icon-container"
+    @click="$emit('folder-click', 'finder', title)"
+  >
+    <img
+      class="desktop-icon"
+      src="../images/directory.png"
+    ><p>{{ title }}</p>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @import "../../../../assets/scss/mixins";

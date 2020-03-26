@@ -1,16 +1,24 @@
-<template>
-  <div class="finder-outer-directory-list">
-    <div @click="$emit('item-click', type, finderItem)" class="finder-item-container" :class="{selected: this.currentFolder === this.finderItem.name || this.currentItem === this.finderItem.id}">
-      <div><img :class="`finder-${type}-icon image-${isPseudoImage()}`" :src="require(`../images/${finderItem.image}`)"/></div>
-      <div><p>{{finderItem.name}}</p></div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'FinderItem',
-  props: ['currentFolder', 'currentItem', 'finderItem', 'type'],
+  props: {
+    currentFolder: {
+      type: String,
+      default: ''
+    },
+    currentItem: {
+      type: String,
+      default: ''
+    },
+    finderItem: {
+      type: Object,
+      default: () => {}
+    },
+    type: {
+      type: String,
+      default: ''
+    }
+  },
   methods: {
     isPseudoImage() {
       return this.type === 'item' && this.finderItem.name.split('.')[1].includes('jpg' || 'png');
@@ -18,6 +26,24 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="finder-outer-directory-list">
+    <div
+      class="finder-item-container"
+      :class="{selected: currentFolder === finderItem.name || currentItem === finderItem.id}"
+      @click="$emit('item-click', type, finderItem)"
+    >
+      <div>
+        <img
+          :class="`finder-${type}-icon image-${isPseudoImage()}`"
+          :src="require(`../images/${finderItem.image}`)"
+        >
+      </div>
+      <div><p>{{ finderItem.name }}</p></div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @import "../../../../assets/scss/variables-mac";

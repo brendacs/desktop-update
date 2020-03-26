@@ -1,9 +1,3 @@
-<template>
-  <div class="dock">
-    <DockIcon v-for="app in apps" :key="app.id" v-on:icon-click="$emit('icon-click', app.id)" :name="app.name"/>
-  </div>
-</template>
-
 <script>
 import DockIcon from './DockIcon.vue'
 
@@ -12,9 +6,25 @@ export default {
   components: {
     DockIcon
   },
-  props: ['apps']
+  props: {
+    apps: {
+      type: Array,
+      default: () => []
+    }
+  }
 }
 </script>
+
+<template>
+  <div class="dock">
+    <DockIcon
+      v-for="app in apps"
+      :key="app.id"
+      :name="app.name"
+      @icon-click="$emit('icon-click', app.id)"
+    />
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @import "../../../../assets/scss/variables-mac",

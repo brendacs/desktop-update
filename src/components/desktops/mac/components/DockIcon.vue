@@ -1,19 +1,32 @@
-<template>
-  <div class="dock-icon-container">
-    <p class="dock-icon-label">{{name}}</p>
-    <div class="label-triangle"></div>
-    <a @click="$emit('icon-click')" class="dock-icon-link">
-      <img class="dock-icon" :src="require(`../images/${name.toLowerCase()}.png`)"/>
-    </a>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'DockIcon',
-  props: ['name']
+  props: {
+    name: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
+
+<template>
+  <div class="dock-icon-container">
+    <p class="dock-icon-label">
+      {{ name }}
+    </p>
+    <div class="label-triangle" />
+    <a
+      class="dock-icon-link"
+      @click="$emit('icon-click')"
+    >
+      <img
+        class="dock-icon"
+        :src="require(`../images/${name.toLowerCase()}.png`)"
+      >
+    </a>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 @import "../../../../assets/scss/variables-mac",

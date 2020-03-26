@@ -1,22 +1,30 @@
+<script>
+export default {
+  name: 'WindowNavigation',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
+
 <template>
   <div class="window-nav">
     <div class="window-button-container">
-      <a @click="$emit('close-window')" class="window-button button-close"><p>x</p></a>
+      <a
+        class="window-button button-close"
+        @click="$emit('close-window')"
+      ><p>x</p></a>
       <a class="window-button button-min"><p>-</p></a>
       <a class="window-button button-expand"><p>+</p></a>
     </div>
     <div class="window-title-container">
-      <p>{{title}}</p>
+      <p>{{ title }}</p>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'WindowNavigation',
-  props: ['title']
-}
-</script>
 
 <style lang="scss" scoped>
 @import "../../assets/scss/variables-mac",
