@@ -28,20 +28,18 @@ export default {
 </script>
 
 <template>
-  <div class="finder-outer-directory-list">
-    <div
-      class="finder-item-container"
-      :class="{selected: currentFolder === finderItem.name || currentItem === finderItem.id}"
-      @click="$emit('item-click', type, finderItem)"
-    >
-      <div>
-        <img
-          :class="`finder-${type}-icon image-${isPseudoImage()}`"
-          :src="require(`../images/${finderItem.image}`)"
-        >
-      </div>
-      <div><p>{{ finderItem.name }}</p></div>
+  <div
+    class="finder-item-container"
+    :class="{selected: currentFolder === finderItem.name || currentItem === finderItem.id}"
+    @click="$emit('item-click', type, finderItem)"
+  >
+    <div>
+      <img
+        :class="`finder-${type}-icon image-${isPseudoImage()}`"
+        :src="require(`../images/${finderItem.image}`)"
+      >
     </div>
+    <div><p>{{ finderItem.name }}</p></div>
   </div>
 </template>
 
