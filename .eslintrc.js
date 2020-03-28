@@ -35,6 +35,13 @@ module.exports = {
       'ignoreGrandchildrenOf': ['computed', 'directives', 'inject', 'props', 'watch'],
       'minKeys': 2,
       'natural': true
+		}],
+		'vue/max-attributes-per-line': ['error', {
+			"singleline": 2,
+			"multiline": {
+				"max": 1,
+				"allowFirstLine": false
+			}
 		}]
 	}
 };

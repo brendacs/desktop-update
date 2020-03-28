@@ -14,11 +14,11 @@ export default {
   },
   data() {
     return {
-      apps: [
-        {id: 'finder', name: 'Finder'},
-        {id: 'sublime', name: 'Sublime', title: 'Sublime'},
-        {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'}
-      ],
+      apps: {
+        finder: {id: 'finder', name: 'Finder'},
+        sublime: {id: 'sublime', name: 'Sublime', title: 'Sublime'},
+        terminal: {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'}
+      },
       currentApp: null,
       currentFolder: 'Education',
       folders: ['Education', 'Experience', 'Projects', 'Documents']
@@ -44,11 +44,9 @@ export default {
       />
     </div>
     <DraggableWindow
-      v-for="app in apps"
-      :key="app.id"
-      :name="app.name"
-      :show="currentApp === app.id"
-      :title="app.title || currentFolder"
+      :name="apps.finder.name"
+      :show="currentApp === apps.finder.id"
+      :title="apps.finder.title || currentFolder"
       @close-window="currentApp = null"
     >
       <FinderApp

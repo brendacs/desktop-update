@@ -67,8 +67,13 @@ export default {
 .finder-window, .terminal-window, .sublime-window {
   top: 10vh;
   left: 20vw;
-  height: 70vh;
-  width: 60vw;
+  height: 400px;
+  width: 700px;
+}
+
+.sublime-window {
+  height: 600px;
+  width: 800px;
 }
 
 .sublime-window, .terminal-window {

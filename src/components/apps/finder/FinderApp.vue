@@ -1,11 +1,13 @@
 <script>
 import FinderItem from './components/FinderItem'
+import ItemDescription from './components/ItemDescription'
 import finderData from './data/finderData.json'
 
 export default {
-  name: 'FinderSection',
+  name: 'FinderApp',
   components: {
-    FinderItem
+    FinderItem,
+    ItemDescription
   },
   props: {
     currentFolder: {
@@ -15,16 +17,20 @@ export default {
   },
   data() {
     return {
-      currentItem: null,
+      currentItem: {},
+      expanded: false,
       finderData: finderData
     }
   },
   methods: {
     selectFinderItem(type, finderItem) {
       if (type === 'folder') {
+        this.currentItem = {};
+        this.expanded = false;
         this.$emit('item-click', finderItem);
       } else if (type === 'item') {
-        this.currentItem = finderItem.id;
+        this.currentItem = finderItem;
+        this.expanded = false;
       }
     }
   }
@@ -53,6 +59,13 @@ export default {
         @item-click="selectFinderItem"
       />
     </div>
+    <div class="finder-section">
+      <ItemDescription
+        :expanded="expanded"
+        :item="currentItem"
+        @show-click="expanded = !expanded"
+      />
+    </div>
   </div>
 </template>
 
@@ -69,7 +82,7 @@ export default {
 
 .finder-section {
   height: 100%;
-  width: 30%;
+  width: 33%;
   border-right: 1px solid $mac-titlebar-color-border;
   padding: 2px 0;
   overflow-x: hidden;
@@ -77,7 +90,7 @@ export default {
 }
 
 .finder-section:last-child {
-  width: 40%;
+  width: 34%;
   border-right: none;
 }
 

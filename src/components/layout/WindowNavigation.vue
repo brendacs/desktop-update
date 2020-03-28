@@ -13,12 +13,9 @@ export default {
 <template>
   <div class="window-nav">
     <div class="window-button-container">
-      <a
-        class="window-button button-close"
-        @click="$emit('close-window')"
-      ><p>x</p></a>
-      <a class="window-button button-min"><p>-</p></a>
-      <a class="window-button button-expand"><p>+</p></a>
+      <a class="window-button button-close" @click="$emit('close-window')" />
+      <a class="window-button button-min" />
+      <a class="window-button button-expand" />
     </div>
     <div class="window-title-container">
       <p>{{ title }}</p>
@@ -46,28 +43,17 @@ export default {
   flex-direction: row;
   padding: 5px;
 
-  &:hover {
-    .window-button p {
-      display: inline;
-    }
-  }
-
   .window-button {
     color: $mac-label-font-color;
     border-width: 0;
     border-radius: 50%;
-    width: 13px;
-    height: 13px;
-    margin-left: 8px;
+    width: 11px;
+    height: 11px;
+    margin-left: 7px;
     cursor: default;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    p {
-      display: none;
-      font-weight: bold;
-    }
   }
 
   .button-close {
