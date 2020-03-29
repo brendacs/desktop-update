@@ -3,6 +3,7 @@ import DesktopDock from './components/DesktopDock.vue'
 import DesktopFolder from './components/DesktopFolder.vue'
 import DraggableWindow from '../../layout/DraggableWindow.vue'
 import FinderApp from '../../apps/finder/FinderApp'
+import VscodeApp from '../../apps/vscode/VscodeApp'
 
 export default {
   name: 'MacDesktop',
@@ -10,14 +11,15 @@ export default {
     DesktopDock,
     DesktopFolder,
     DraggableWindow,
-    FinderApp
+    FinderApp,
+    VscodeApp
   },
   data() {
     return {
       apps: {
         finder: {id: 'finder', name: 'Finder'},
-        sublime: {id: 'sublime', name: 'Sublime', title: 'Sublime'},
-        terminal: {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'}
+        terminal: {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'},
+        vscode: {id: 'vscode', name: 'VSCode', title: 'Visual Studio Code'}
       },
       currentApp: null,
       currentFolder: 'Education',
@@ -53,6 +55,14 @@ export default {
         :current-folder="currentFolder"
         @item-click="(folder) => currentFolder = folder.name"
       />
+    </DraggableWindow>
+    <DraggableWindow
+      :name="apps.vscode.name"
+      :show="currentApp === apps.vscode.id"
+      :title="apps.vscode.title"
+      @close-window="currentApp = null"
+    >
+      <VscodeApp />
     </DraggableWindow>
     <div class="dock">
       <DesktopDock

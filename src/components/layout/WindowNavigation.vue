@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="window-nav">
+  <div class="window-nav" :class="{vscode: title === 'Visual Studio Code'}">
     <div class="window-button-container">
       <a class="window-button button-close" @click="$emit('close-window')" />
       <a class="window-button button-min" />
@@ -36,6 +36,12 @@ export default {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid $mac-titlebar-color-border;
+}
+
+.vscode {
+  background: rgb(30, 31, 28);
+  border-bottom: rgb(30, 31, 28);
+  color: rgb(204, 204, 204);
 }
 
 .window-button-container {

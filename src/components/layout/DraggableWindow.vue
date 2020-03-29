@@ -64,27 +64,23 @@ export default {
   width: 100vw;
 }
 
-.finder-window, .terminal-window, .sublime-window {
+.finder-window, .terminal-window {
   top: 10vh;
   left: 20vw;
   height: 400px;
   width: 700px;
 }
 
-.sublime-window {
+.vscode-window {
+  top: 1vh;
+  left: 8vw;
   height: 600px;
-  width: 800px;
+  width: 900px;
+  background-color: rgb(39, 40, 34);
 }
 
-.sublime-window, .terminal-window {
+.terminal-window {
   background-color: black;
-  top: 12vh;
-  left: 22vw;
-}
-
-.sublime-window {
-  height: 85vh;
-  width: 70vw;
 }
 
 @media screen and (max-width: 1024px) {
