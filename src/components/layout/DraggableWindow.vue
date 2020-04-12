@@ -72,11 +72,11 @@ export default {
 }
 
 .vscode-window {
-  top: 1vh;
-  left: 8vw;
+  top: 5vh;
+  left: 9vw;
   height: 600px;
   width: 900px;
-  background-color: rgb(39, 40, 34);
+  background-color: $vscode-light;
 }
 
 .terminal-window {

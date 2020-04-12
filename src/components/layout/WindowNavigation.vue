@@ -39,9 +39,9 @@ export default {
 }
 
 .vscode {
-  background: rgb(30, 31, 28);
-  border-bottom: rgb(30, 31, 28);
-  color: rgb(204, 204, 204);
+  background: $vscode-dark;
+  border-bottom: $vscode-dark;
+  color: $vscode-gray-font;
 }
 
 .window-button-container {
