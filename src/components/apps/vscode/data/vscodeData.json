@@ -16,8 +16,6 @@
   },
   "tests": {
     "jest": "jest",
-    "enzyme": "enzyme",
-    "testcafe": "testcafe",
     "unittest": "unittest",
     "junit": "junit"
   },

@@ -20,6 +20,7 @@ export default {
 
 <template>
   <div :class="itemType">
+    <img class="icon" :src="require(`../images/icon-${itemName.split('.')[1]}.svg`)">
     <p>{{ itemName }}</p>
   </div>
 </template>
@@ -32,7 +33,7 @@ export default {
   width: 100%;
   height: 25px;
   color: $vscode-gray-font;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -61,5 +62,10 @@ export default {
     cursor: pointer;
     font-size: 13px;
   }
+}
+
+.icon {
+  width: 15px;
+  margin-right: 5px;
 }
 </style>

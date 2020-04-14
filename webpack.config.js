@@ -4,13 +4,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-        'vue-style-loader',
-        'css-loader',
-        'sass-loader'
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|gif|svg)$/i,
         use: [
           {
             loader: 'url-loader',
