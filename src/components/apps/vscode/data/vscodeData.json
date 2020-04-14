@@ -1,11 +1,16 @@
 {
   "src": {
+    "data": {
+      "postgresql": "postgresql.sql",
+      "mongodb": "mongodb.bson"
+    },
     "java": "java.java",
     "javascript": "javascript.js",
     "node": "node.js",
     "python": "python.py",
     "react": "react.js",
     "reactnative": "reactnative.js",
+    "redux": "redux.js",
     "typescript": "typescript.ts",
     "vue": "vue.vue"
   },
@@ -15,6 +20,20 @@
     "testcafe": "testcafe",
     "unittest": "unittest",
     "junit": "junit"
+  },
+  "utils": {
+    "grunt": "grunt.js",
+    "gulp": "gulp.js",
+    "webpack": "webpack.js",
+    "npm": "npm.js",
+    "yarn": "yarn.js",
+    "pip": "pip.py",
+    "postman": "postman.py",
+    "git": "git.ts",
+    "github": "github.ts",
+    "pm2": "pm2.js",
+    "digitalocean": "digitalocean.java",
+    "heroku": "heroku.java"
   },
   ".gitignore": ".gitignore",
   "automate.sh": "automate.sh",

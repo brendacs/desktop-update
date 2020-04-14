@@ -1,6 +1,13 @@
 <script>
+import FileNavigation from './components/FileNavigation'
+import TextEditor from './components/TextEditor'
+
 export default {
-  name: 'Vscode'
+  name: 'VscodeApp',
+  components: {
+    FileNavigation,
+    TextEditor
+  }
 }
 </script>
 
@@ -13,24 +20,8 @@ export default {
       <button><img src="./images/vscode-debug.png"></button>
       <button><img src="./images/vscode-ext.png"></button>
     </div>
-    <div class="filebar">
-      <div class="filebar-explorer">
-        <p class="text">
-          {{ 'Explorer'.toUpperCase() }}
-        </p>
-      </div>
-      <div class="open">
-        <div class="filebar-header"></div>
-      </div>
-      <div class="files">
-        <div class="filebar-header"></div>
-      </div>
-    </div>
-    <div class="editor">
-      <div class="tabs"></div>
-      <div class="breadcrumb-bar"></div>
-      <div class="text"></div>
-    </div>
+    <FileNavigation />
+    <TextEditor />
   </div>
 </template>
 
@@ -59,60 +50,6 @@ export default {
     img {
       width: 100%;
     }
-  }
-}
-
-.filebar {
-  display: flex;
-  flex-direction: column;
-  background-color: $vscode-dark;
-  min-width: 200px;
-  height: 100%;
-
-  &-explorer {
-    color: $vscode-gray-font;
-    height: 40px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-
-    .text {
-      font-size: 11px;
-    }
-  }
-
-  .open {
-    height: 30%;
-  }
-
-  .files {
-    height: 70%;
-  }
-
-  &-header {
-    background-color: $vscode-light;
-    width: 100%;
-    height: 25px;
-  }
-}
-
-.editor {
-  height: 100%;
-  width: 100%;
-
-  .tabs {
-    color: $vscode-gray-font;
-    height: 36.5px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: $vscode-highlight;
-  }
-
-  .breadcrumb-bar {
-    height: 25px;
-    box-shadow: 0 8px 5px -2px $vscode-dark;
   }
 }
 </style>
