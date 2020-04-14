@@ -1,12 +1,31 @@
 <script>
 import FileNavigation from './components/FileNavigation'
 import TextEditor from './components/TextEditor'
+import vscodeData from './data/vscodeData.json'
 
 export default {
   name: 'VscodeApp',
   components: {
     FileNavigation,
     TextEditor
+  },
+  data() {
+    return {
+      files: [],
+      folders: [],
+      vscodeData
+    }
+  },
+  methods: {
+    parseVscodeData() {
+      for (let item in vscodeData) {
+        if (item.includes('.')) {
+          this.files.append(item);
+        } else {
+          this.folders.append(item);
+        }
+      }
+    }
   }
 }
 </script>

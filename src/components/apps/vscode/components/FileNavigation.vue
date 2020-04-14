@@ -1,6 +1,11 @@
 <script>
+import FileItem from './FileItem'
+
 export default {
-  name: 'FileNavigation'
+  name: 'FileNavigation',
+  components: {
+    FileItem
+  }
 }
 </script>
 
@@ -12,10 +17,12 @@ export default {
       </p>
     </div>
     <div class="open">
-      <div class="filebar-header"></div>
+      <div class="filebar-header" />
+      <FileItem item-name="FileItem.vue" item-type="file" />
     </div>
     <div class="files">
-      <div class="filebar-header"></div>
+      <div class="filebar-header" />
+      <FileItem item-name="FileItem.vue" item-type="file" />
     </div>
   </div>
 </template>

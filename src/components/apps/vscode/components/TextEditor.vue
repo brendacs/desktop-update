@@ -1,12 +1,20 @@
 <script>
+import FileItem from './FileItem'
+
 export default {
-  name: 'TextEditor'
+  name: 'TextEditor',
+  components: {
+    FileItem
+  }
 }
 </script>
 
 <template>
   <div class="editor">
-    <div class="tabs"></div>
+    <div class="tabs">
+      <FileItem item-name="FileItem.vue" item-type="tab" />
+      <FileItem item-name="FileItem.vue" item-type="tab" />
+    </div>
     <div class="breadcrumb-bar"></div>
     <div class="text"></div>
   </div>
@@ -22,11 +30,10 @@ export default {
   .tabs {
     color: $vscode-gray-font;
     height: 36.5px;
-    padding: 0 20px;
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: $vscode-highlight;
+    background-color: $vscode-dark;
   }
 
   .breadcrumb-bar {
