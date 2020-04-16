@@ -5,6 +5,16 @@ export default {
   name: 'FileNavigation',
   components: {
     FileItem
+  },
+  props: {
+    files: {
+      type: Array,
+      default: () => []
+    },
+    folders: {
+      type: Array,
+      default: () => []
+    }
   }
 }
 </script>
@@ -18,11 +28,27 @@ export default {
     </div>
     <div class="open">
       <div class="filebar-header" />
-      <FileItem item-name="FileItem.vue" item-type="file" />
+      <FileItem
+        v-for="(file, key) in files"
+        :key="key"
+        :item-name="file"
+        item-type="file"
+      />
     </div>
     <div class="files">
       <div class="filebar-header" />
-      <FileItem item-name="FileItem.vue" item-type="file" />
+      <FileItem
+        v-for="(folder, key) in folders"
+        :key="key"
+        :item-name="folder"
+        item-type="file"
+      />
+      <FileItem
+        v-for="(file, key) in files"
+        :key="key"
+        :item-name="file"
+        item-type="file"
+      />
     </div>
   </div>
 </template>

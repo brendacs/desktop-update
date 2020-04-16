@@ -16,13 +16,16 @@ export default {
       vscodeData
     }
   },
+  beforeMount() {
+    this.parseVscodeData();
+  },
   methods: {
     parseVscodeData() {
       for (let item in vscodeData) {
         if (item.includes('.')) {
-          this.files.append(item);
+          this.files.push(item);
         } else {
-          this.folders.append(item);
+          this.folders.push(item);
         }
       }
     }
@@ -39,8 +42,8 @@ export default {
       <button><img src="./images/vscode-debug.png"></button>
       <button><img src="./images/vscode-ext.png"></button>
     </div>
-    <FileNavigation />
-    <TextEditor />
+    <FileNavigation :files="files" :folders="folders" />
+    <TextEditor :files="files" />
   </div>
 </template>
 

@@ -5,6 +5,12 @@ export default {
   name: 'TextEditor',
   components: {
     FileItem
+  },
+  props: {
+    files: {
+      type: Array,
+      default: () => []
+    }
   }
 }
 </script>
@@ -12,8 +18,12 @@ export default {
 <template>
   <div class="editor">
     <div class="tabs">
-      <FileItem item-name="FileItem.vue" item-type="tab" />
-      <FileItem item-name="FileItem.vue" item-type="tab" />
+      <FileItem
+        v-for="(file, key) in files"
+        :key="key"
+        :item-name="file"
+        item-type="tab"
+      />
     </div>
     <div class="breadcrumb-bar"></div>
     <div class="text"></div>
