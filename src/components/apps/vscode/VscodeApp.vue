@@ -42,7 +42,11 @@ export default {
       <button><img src="./images/vscode-debug.png"></button>
       <button><img src="./images/vscode-ext.png"></button>
     </div>
-    <FileNavigation :files="files" :folders="folders" />
+    <FileNavigation
+      :files="files"
+      :folders="folders"
+      :vscodeData="vscodeData"
+    />
     <TextEditor :files="files" />
   </div>
 </template>

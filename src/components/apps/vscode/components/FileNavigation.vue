@@ -1,10 +1,12 @@
 <script>
 import FileItem from './FileItem'
+import FolderItem from './FolderItem'
 
 export default {
   name: 'FileNavigation',
   components: {
-    FileItem
+    FileItem,
+    FolderItem
   },
   props: {
     files: {
@@ -14,6 +16,10 @@ export default {
     folders: {
       type: Array,
       default: () => []
+    },
+    vscodeData: {
+      type: Object,
+      default: () => {}
     }
   }
 }
@@ -37,9 +43,10 @@ export default {
     </div>
     <div class="files">
       <div class="filebar-header" />
-      <FileItem
+      <FolderItem
         v-for="(folder, key) in folders"
         :key="key"
+        :files="vscodeData[folder]"
         :item-name="folder"
         item-type="file"
       />
@@ -81,6 +88,7 @@ export default {
 
   .files {
     height: 70%;
+    overflow: scroll;
   }
 
   &-header {
