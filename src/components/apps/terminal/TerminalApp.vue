@@ -18,20 +18,20 @@ export default {
       } else if (cmd === 'cd') {
         if (!subcmd) {
           this.echo('');
-        } else if (Object.keys(subcmdData).includes(subcmd)) {
+        } else if (subcmd in subcmdData) {
           cmdData.ls = subcmdData[subcmd].files;
-          cmdData.pwd = `~/Brenda_Zhang/Desktop${subcmdData[subcmd].folder}\n`;
+          cmdData.pwd = `~/Brenda_Zhang/Desktop${subcmdData[subcmd].folder}`;
           if (subcmd === '../' && type === 'desktop') {
-            this.echo('zsh: cd: permission denied\n');
+            this.echo('zsh: cd: permission denied');
           }
           type = subcmdData[subcmd].type;
         } else {
-          this.echo('cd: no such file or directory: ' + subcmd);
+          this.echo(`cd: no such file or directory: ${subcmd}`);
         }
-      } else if (Object.keys(cmdData).includes(cmd)) {
+      } else if (cmd in cmdData) {
         this.echo(cmdData[cmd]);
       } else {
-        this.echo('zsh: command not found: ' + command);
+        this.echo(`zsh: command not found: ${command}`);
       }
     }, config);
   }
@@ -42,8 +42,18 @@ export default {
   <div class="terminal" />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  @import "../../../assets/scss/variables-mac";
+
   .terminal {
     height: 100%;
+  }
+
+  .terminal-command span {
+    color: #fff !important;
+  }
+
+  .cmd-prompt span {
+    color: $folder-bright-blue !important;
   }
 </style>
