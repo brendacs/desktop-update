@@ -65,15 +65,20 @@ export default {
 }
 
 .finder-window, .terminal-window {
-  top: 10vh;
+  top: 15vh;
   left: 20vw;
   height: 400px;
   width: 700px;
 }
 
+.terminal-window {
+  top: 20vh;
+  left: 25vw;
+}
+
 .vscode-window {
   top: 5vh;
-  left: 9vw;
+  left: 18vw;
   height: 600px;
   width: 900px;
   background-color: $vscode-light;

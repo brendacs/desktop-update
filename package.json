@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "jquery": "^3.5.0",
+    "jquery.terminal": "^2.15.4",
     "vue": "^2.6.11",
     "vue-draggable-resizable": "^2.1.0"
   },

@@ -3,6 +3,7 @@ import DesktopDock from './components/DesktopDock.vue'
 import DesktopFolder from './components/DesktopFolder.vue'
 import DraggableWindow from '../../layout/DraggableWindow.vue'
 import FinderApp from '../../apps/finder/FinderApp'
+import TerminalApp from '../../apps/terminal/TerminalApp'
 import VscodeApp from '../../apps/vscode/VscodeApp'
 
 export default {
@@ -12,6 +13,7 @@ export default {
     DesktopFolder,
     DraggableWindow,
     FinderApp,
+    TerminalApp,
     VscodeApp
   },
   data() {
@@ -66,6 +68,14 @@ export default {
       @close-window="currentApp = null"
     >
       <VscodeApp />
+    </DraggableWindow>
+    <DraggableWindow
+      :name="apps.terminal.name"
+      :show="currentApp === apps.terminal.id"
+      :title="apps.terminal.title"
+      @close-window="currentApp = null"
+    >
+      <TerminalApp />
     </DraggableWindow>
     <div class="dock">
       <DesktopDock
