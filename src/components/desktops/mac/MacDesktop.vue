@@ -23,13 +23,15 @@ export default {
       },
       currentApp: null,
       currentFolder: 'Education',
-      folders: ['Education', 'Experience', 'Projects', 'Documents']
+      folders: ['Education', 'Experience', 'Projects', 'Documents'],
+      openedFromDesktop: false
     }
   },
   methods: {
     openApp(app, folder) {
       this.currentApp = app;
       this.currentFolder = folder || this.currentFolder;
+      this.openedFromDesktop = true;
     }
   }
 }
@@ -53,6 +55,7 @@ export default {
     >
       <FinderApp
         :current-folder="currentFolder"
+        :opened-from-desktop="openedFromDesktop"
         @item-click="(folder) => currentFolder = folder.name"
       />
     </DraggableWindow>

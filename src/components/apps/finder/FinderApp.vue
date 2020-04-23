@@ -13,6 +13,10 @@ export default {
     currentFolder: {
       type: String,
       default: ''
+    },
+    openedFromDesktop: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -29,6 +33,7 @@ export default {
         this.expanded = false;
         this.$emit('item-click', finderItem);
       } else if (type === 'item') {
+        this.openedFromDesktop = false;
         this.currentItem = finderItem;
         this.expanded = false;
       }
@@ -62,7 +67,7 @@ export default {
     <div class="finder-section">
       <ItemDescription
         :expanded="expanded"
-        :item="currentItem"
+        :item="openedFromDesktop ? {} : currentItem"
         @show-click="expanded = !expanded"
       />
     </div>
