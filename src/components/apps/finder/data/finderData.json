@@ -183,6 +183,19 @@
         "github": "https://github.com/brendacs/me",
         "website": "https://brendacs.dev"
       },
+      "colludia": {
+        "id": "colludia",
+        "name": "Colludia.js",
+        "image": "file.png",
+        "heading": "Colludia.js",
+        "subtitle": "Jekyll, JS",
+        "startDate": "2/23/2020",
+        "endDate": "Today",
+        "description": "A game blog prioritizing niche indie games, while also shining light on the indie developers behind them all.",
+        "link": "",
+        "github": "https://github.com/brendacs/colludia",
+        "website": "https://colludia.com"
+      },
       "stopbot": {
         "id": "stopbot",
         "name": "Discord Stop Bot.js",
