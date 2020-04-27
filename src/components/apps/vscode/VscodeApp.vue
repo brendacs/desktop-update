@@ -45,7 +45,7 @@ export default {
     <FileNavigation
       :files="files"
       :folders="folders"
-      :vscodeData="vscodeData"
+      :vscode-data="vscodeData"
     />
     <TextEditor :files="files" />
   </div>

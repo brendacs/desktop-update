@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 /* imports */
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 @import "./assets/scss/variables-mac";
 
 /* reset */

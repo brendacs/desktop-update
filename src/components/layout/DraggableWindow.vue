@@ -64,7 +64,7 @@ export default {
   width: 100vw;
 }
 
-.finder-window, .terminal-window {
+.finder-window, .terminal-window, .user-window {
   top: 15vh;
   left: 20vw;
   height: 400px;
@@ -74,6 +74,10 @@ export default {
 .terminal-window {
   top: 20vh;
   left: 25vw;
+}
+
+.user-window {
+  left: 30vw;
 }
 
 .vscode-window {

@@ -1,9 +1,11 @@
 <script>
-import DesktopDock from './components/DesktopDock.vue'
-import DesktopFolder from './components/DesktopFolder.vue'
-import DraggableWindow from '../../layout/DraggableWindow.vue'
+import DesktopDock from './components/DesktopDock'
+import DesktopFolder from './components/DesktopFolder'
+import DraggableWindow from '../../layout/DraggableWindow'
 import FinderApp from '../../apps/finder/FinderApp'
 import TerminalApp from '../../apps/terminal/TerminalApp'
+import UserApp from '../../apps/user/UserApp'
+import UserTag from './components/UserTag'
 import VscodeApp from '../../apps/vscode/VscodeApp'
 
 export default {
@@ -14,6 +16,8 @@ export default {
     DraggableWindow,
     FinderApp,
     TerminalApp,
+    UserApp,
+    UserTag,
     VscodeApp
   },
   data() {
@@ -21,6 +25,7 @@ export default {
       apps: {
         finder: {id: 'finder', name: 'Finder'},
         terminal: {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'},
+        user: {id: 'user', name: 'User', title: 'About This Mac'},
         vscode: {id: 'vscode', name: 'VSCode', title: 'Visual Studio Code'}
       },
       currentApp: null,
@@ -41,6 +46,15 @@ export default {
 
 <template>
   <div class="desktop">
+    <UserTag @tag-click="openApp" />
+    <DraggableWindow
+      :name="apps.user.name"
+      :show="currentApp === apps.user.id"
+      :title="apps.user.title"
+      @close-window="currentApp = null"
+    >
+      <UserApp />
+    </DraggableWindow>
     <div class="folders">
       <DesktopFolder
         v-for="(folder, index) in folders"
