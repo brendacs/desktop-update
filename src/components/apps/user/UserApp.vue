@@ -16,7 +16,7 @@ export default {
       <p class="version">
         Version 2.3.6
       </p>
-      <p><span class="bold spaced">MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)</span> </p>
+      <p><span class="bold spaced">MacBook Pro (13-inch, 2020)</span> </p>
       <p><span class="bold spaced">Processor</span> 2.8 GHz Quad-Core Intel Core i7</p>
       <p><span class="bold spaced">Memory</span> 16 GB 2133 MHz LPDDR3</p>
       <p><span class="bold spaced">Startup Disk</span> Macintosh HD</p>
@@ -72,10 +72,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid $mac-gray;
+  border: 5px solid white;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   margin-right: 50px;
 
   img {

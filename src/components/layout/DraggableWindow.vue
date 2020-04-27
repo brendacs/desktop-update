@@ -78,6 +78,8 @@ export default {
 
 .user-window {
   left: 30vw;
+  height: 350px;
+  width: 630px;
 }
 
 .vscode-window {
