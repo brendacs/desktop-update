@@ -1,5 +1,5 @@
 npm run build
-mv CNAME dist/
+# mv CNAME dist/
 rm .gitignore
 git add dist
 git commit -m "dist commit"
