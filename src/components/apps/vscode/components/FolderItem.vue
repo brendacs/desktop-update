@@ -20,7 +20,7 @@ export default {
 
 <template>
   <div :class="itemType">
-    <img class="icon" :src="require('../images/icon-folder.svg')">
+    <img class="icon" :src="require('../images/icon-folder.svg')" />
     <p>{{ itemName }}</p>
   </div>
 </template>

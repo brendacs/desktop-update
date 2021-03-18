@@ -25,13 +25,13 @@ export default {
     }
   },
   methods: {
-    hasValidExtension: (item, exts=[]) => {
+    hasValidExtension: (item, exts = []) => {
       for (let ext of exts) {
         if (item.name && item.name.split('.')[1].includes(ext)) {
-          return true;
+          return true
         }
       }
-      return false;
+      return false
     }
   }
 }
@@ -40,24 +40,31 @@ export default {
 <template>
   <div
     class="finder-item-container"
-    :class="{selected: currentFolder === finderItem.name || currentItem && currentItem.id === finderItem.id}"
+    :class="{
+      selected:
+        currentFolder === finderItem.name ||
+        (currentItem && currentItem.id === finderItem.id)
+    }"
     @click="$emit('item-click', type, finderItem)"
   >
     <div>
       <img
-        :class="`finder-${type}-icon image-${type === 'item' && hasValidExtension(finderItem, exts)}`"
+        :class="
+          `finder-${type}-icon image-${type === 'item' &&
+            hasValidExtension(finderItem, exts)}`
+        "
         :src="require(`../images/${finderItem.image}`)"
-      >
+      />
     </div>
     <div class="name">
       <p>{{ finderItem.name }}</p>
-      <span :class="{hide: type === 'item'}">▲</span>
+      <span :class="{ hide: type === 'item' }">▲</span>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
+@import '../../../../assets/scss/variables-mac';
 
 /* finder items */
 .finder-item-container {
@@ -84,7 +91,7 @@ export default {
 
 .finder-item-icon.image-true {
   border: 1px solid white;
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0,0,0,0.25);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.25);
 }
 
 .name {

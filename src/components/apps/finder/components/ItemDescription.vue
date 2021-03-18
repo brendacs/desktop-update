@@ -1,44 +1,44 @@
 <script>
 export default {
-  name: 'ItemDescription',
+  name: "ItemDescription",
   props: {
     expanded: {
       type: Boolean,
-      default: false
+      default: false,
     },
     item: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   data() {
     return {
-      exts: ['css', 'dev', 'js', 'html', 'pdf', 'py', 'vue'],
-      publicPath: process.env.BASE_URL
-    }
+      exts: ["css", "dev", "js", "html", "pdf", "py", "vue"],
+      publicPath: process.env.BASE_URL,
+    };
   },
   methods: {
-    hasValidExtension: (item, exts=[]) => {
+    hasValidExtension: (item, exts = []) => {
       for (let ext of exts) {
-        if (item.name && item.name.split('.')[1].includes(ext)) {
+        if (item.name && item.name.split(".")[1].includes(ext)) {
           return true;
         }
       }
       return false;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <template>
-  <div class="finder-selected-item-wrapper" :class="{hide: !item.name}">
+  <div class="finder-selected-item-wrapper" :class="{ hide: !item.name }">
     <div class="finder-selected-item">
       <div class="finder-selected-image">
         <img
           class="selected-item-image"
           :class="`file-${hasValidExtension(item, exts)}`"
           :src="item.image && require(`../images/${item.image}`)"
-        >
+        />
       </div>
       <div class="finder-selected-item-text-container">
         <div class="item-heading">
@@ -50,7 +50,7 @@ export default {
         <div class="info-heading">
           <h3>Information</h3>
           <a class="finder-link" @click="$emit('show-click')">
-            {{ expanded ? 'Show Less' : 'Show More' }}
+            {{ expanded ? "Show Less" : "Show More" }}
           </a>
         </div>
         <div class="info-row">
@@ -65,7 +65,7 @@ export default {
             {{ item.endDate }}
           </p>
         </div>
-        <div class="info-row" :class="{hide: !item.link}">
+        <div class="info-row" :class="{ hide: !item.link }">
           <p>Download</p>
           <p class="detail">
             <a
@@ -77,29 +77,21 @@ export default {
             </a>
           </p>
         </div>
-        <div class="info-row" :class="{hide: !item.website}">
+        <div class="info-row" :class="{ hide: !item.website }">
           <p>Website</p>
           <p class="detail">
-            <a
-              class="finder-link"
-              :href="item.website"
-              target="_blank"
-            >
+            <a class="finder-link" :href="item.website" target="_blank">
               external link
             </a>
           </p>
         </div>
-        <div class="info-row" :class="{hide: !item.github}">
+        <div class="info-row" :class="{ hide: !item.github }">
           <p>GitHub</p>
-          <a
-            class="finder-link"
-            :href="item.github"
-            target="_blank"
-          >
+          <a class="finder-link" :href="item.github" target="_blank">
             repository
           </a>
         </div>
-        <p class="description" :class="{hide: !expanded}">
+        <p class="description" :class="{ hide: !expanded }">
           {{ item.description }}
         </p>
       </div>
@@ -172,7 +164,8 @@ a.finder-link:hover {
   }
 }
 
-.info-heading, .info-row {
+.info-heading,
+.info-row {
   width: 100%;
   display: flex;
   justify-content: space-between;
