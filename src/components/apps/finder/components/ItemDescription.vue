@@ -113,7 +113,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: justify;
+  text-align: left;
   width: 100%;
 
   h2 {
@@ -195,6 +195,6 @@ a.finder-link:hover {
 
 .description {
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 12px;
 }
 </style>
