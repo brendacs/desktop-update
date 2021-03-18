@@ -61,7 +61,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
+@import '../../../../assets/scss/variables-mac';
 
 .filebar {
   display: flex;

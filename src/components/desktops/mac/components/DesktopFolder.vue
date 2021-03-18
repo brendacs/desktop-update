@@ -15,15 +15,13 @@ export default {
     class="desktop-icon-container"
     @click="$emit('folder-click', 'finder', title)"
   >
-    <img
-      class="desktop-icon"
-      src="../images/directory.png"
-    ><p>{{ title }}</p>
+    <img class="desktop-icon" src="../images/directory.png" />
+    <p>{{ title }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/mixins";
+@import '../../../../assets/scss/mixins';
 
 .desktop-icon-container {
   @include short-transition;

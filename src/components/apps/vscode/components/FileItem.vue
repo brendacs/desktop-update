@@ -16,7 +16,10 @@ export default {
 
 <template>
   <div :class="itemType">
-    <img class="icon" :src="require(`../images/icon-${itemName.split('.')[1]}.svg`)">
+    <img
+      class="icon"
+      :src="require(`../images/icon-${itemName.split('.')[1]}.svg`)"
+    />
     <p>{{ itemName }}</p>
   </div>
 </template>

@@ -6,13 +6,13 @@ export default {
 
 <template>
   <div class="tag" @click="$emit('tag-click', 'user')">
-    <img src="../images/lakeside-wallpaper.jpg">
+    <img src="../images/lakeside-wallpaper.jpg" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac",
-        "../../../../assets/scss/mixins";
+@import '../../../../assets/scss/variables-mac',
+  '../../../../assets/scss/mixins';
 
 .tag {
   @include short-transition;
@@ -31,9 +31,8 @@ export default {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-
   }
-  
+
   &:hover {
     height: 40px;
   }

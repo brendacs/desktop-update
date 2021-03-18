@@ -23,10 +23,14 @@ export default {
   data() {
     return {
       apps: {
-        finder: {id: 'finder', name: 'Finder'},
-        terminal: {id: 'terminal', name: 'Terminal', title: 'brendacs@Brendas-MBP-2020'},
-        user: {id: 'user', name: 'User', title: 'About This Mac'},
-        vscode: {id: 'vscode', name: 'VSCode', title: 'Visual Studio Code'}
+        finder: { id: 'finder', name: 'Finder' },
+        terminal: {
+          id: 'terminal',
+          name: 'Terminal',
+          title: 'brendacs@Brendas-MBP-2020'
+        },
+        user: { id: 'user', name: 'User', title: 'About This Mac' },
+        vscode: { id: 'vscode', name: 'VSCode', title: 'Visual Studio Code' }
       },
       currentApp: null,
       currentFolder: 'Education',
@@ -36,9 +40,9 @@ export default {
   },
   methods: {
     openApp(app, folder) {
-      this.currentApp = app;
-      this.currentFolder = folder || this.currentFolder;
-      this.openedFromDesktop = true;
+      this.currentApp = app
+      this.currentFolder = folder || this.currentFolder
+      this.openedFromDesktop = true
     }
   }
 }
@@ -72,7 +76,7 @@ export default {
       <FinderApp
         :current-folder="currentFolder"
         :opened-from-desktop="openedFromDesktop"
-        @item-click="(folder) => currentFolder = folder.name"
+        @item-click="folder => (currentFolder = folder.name)"
       />
     </DraggableWindow>
     <DraggableWindow
@@ -92,23 +96,20 @@ export default {
       <TerminalApp />
     </DraggableWindow>
     <div class="dock">
-      <DesktopDock
-        :apps="apps"
-        @icon-click="openApp"
-      />
+      <DesktopDock :apps="apps" @icon-click="openApp" />
     </div>
   </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import "../../../assets/scss/mixins";
+@import '../../../assets/scss/mixins';
 
 .desktop {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-              url('./images/lakeside-wallpaper.jpg');
+    url('./images/lakeside-wallpaper.jpg');
   background-size: cover;
 }
 

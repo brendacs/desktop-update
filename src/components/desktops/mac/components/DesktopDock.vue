@@ -27,8 +27,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac",
-        "../../../../assets/scss/mixins";
+@import '../../../../assets/scss/variables-mac',
+  '../../../../assets/scss/mixins';
 
 .dock {
   height: 60px;

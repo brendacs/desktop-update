@@ -29,13 +29,13 @@ export default {
   methods: {
     selectFinderItem(type, finderItem) {
       if (type === 'folder') {
-        this.currentItem = {};
-        this.expanded = false;
-        this.$emit('item-click', finderItem);
+        this.currentItem = {}
+        this.expanded = false
+        this.$emit('item-click', finderItem)
       } else if (type === 'item') {
-        this.openedFromDesktop = false;
-        this.currentItem = finderItem;
-        this.expanded = false;
+        this.openedFromDesktop = false
+        this.currentItem = finderItem
+        this.expanded = false
       }
     }
   }
@@ -75,7 +75,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../assets/scss/variables-mac";
+@import '../../../assets/scss/variables-mac';
 
 .finder-file-container {
   height: 95.25%;

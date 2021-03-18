@@ -25,13 +25,13 @@ export default {
         item-type="tab"
       />
     </div>
-    <div class="breadcrumb-bar"></div>
-    <div class="text"></div>
+    <div class="breadcrumb-bar" />
+    <div class="text" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
+@import '../../../../assets/scss/variables-mac';
 
 .editor {
   height: 100%;

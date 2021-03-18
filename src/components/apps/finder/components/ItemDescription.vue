@@ -1,33 +1,33 @@
 <script>
 export default {
-  name: "ItemDescription",
+  name: 'ItemDescription',
   props: {
     expanded: {
       type: Boolean,
-      default: false,
+      default: false
     },
     item: {
       type: Object,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data() {
     return {
-      exts: ["css", "dev", "js", "html", "pdf", "py", "vue"],
-      publicPath: process.env.BASE_URL,
-    };
+      exts: ['css', 'dev', 'js', 'html', 'pdf', 'py', 'vue'],
+      publicPath: process.env.BASE_URL
+    }
   },
   methods: {
     hasValidExtension: (item, exts = []) => {
       for (let ext of exts) {
-        if (item.name && item.name.split(".")[1].includes(ext)) {
-          return true;
+        if (item.name && item.name.split('.')[1].includes(ext)) {
+          return true
         }
       }
-      return false;
-    },
-  },
-};
+      return false
+    }
+  }
+}
 </script>
 
 <template>
@@ -50,7 +50,7 @@ export default {
         <div class="info-heading">
           <h3>Information</h3>
           <a class="finder-link" @click="$emit('show-click')">
-            {{ expanded ? "Show Less" : "Show More" }}
+            {{ expanded ? 'Show Less' : 'Show More' }}
           </a>
         </div>
         <div class="info-row">
@@ -100,7 +100,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac";
+@import '../../../../assets/scss/variables-mac';
 
 .finder-selected-item {
   display: flex;

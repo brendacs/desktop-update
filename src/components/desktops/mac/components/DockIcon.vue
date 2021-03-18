@@ -16,21 +16,18 @@ export default {
       {{ name }}
     </p>
     <div class="label-triangle" />
-    <a
-      class="dock-icon-link"
-      @click="$emit('icon-click')"
-    >
+    <a class="dock-icon-link" @click="$emit('icon-click')">
       <img
         class="dock-icon"
         :src="require(`../images/${name.toLowerCase()}.png`)"
-      >
+      />
     </a>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "../../../../assets/scss/variables-mac",
-        "../../../../assets/scss/mixins";
+@import '../../../../assets/scss/variables-mac',
+  '../../../../assets/scss/mixins';
 
 .dock-icon-container {
   height: 50px;

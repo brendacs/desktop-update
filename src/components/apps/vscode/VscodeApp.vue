@@ -17,15 +17,15 @@ export default {
     }
   },
   beforeMount() {
-    this.parseVscodeData();
+    this.parseVscodeData()
   },
   methods: {
     parseVscodeData() {
       for (let item in vscodeData) {
         if (item.includes('.')) {
-          this.files.push(item);
+          this.files.push(item)
         } else {
-          this.folders.push(item);
+          this.folders.push(item)
         }
       }
     }
@@ -36,11 +36,11 @@ export default {
 <template>
   <div class="vscode-window">
     <div class="sidebar">
-      <button><img src="./images/vscode-files.png"></button>
-      <button><img src="./images/vscode-search.png"></button>
-      <button><img src="./images/vscode-git.png"></button>
-      <button><img src="./images/vscode-debug.png"></button>
-      <button><img src="./images/vscode-ext.png"></button>
+      <button><img src="./images/vscode-files.png" /></button>
+      <button><img src="./images/vscode-search.png" /></button>
+      <button><img src="./images/vscode-git.png" /></button>
+      <button><img src="./images/vscode-debug.png" /></button>
+      <button><img src="./images/vscode-ext.png" /></button>
     </div>
     <FileNavigation
       :files="files"
@@ -52,7 +52,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "../../../assets/scss/variables-mac";
+@import '../../../assets/scss/variables-mac';
 
 .vscode-window {
   width: 100%;
