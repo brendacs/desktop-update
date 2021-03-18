@@ -15,6 +15,11 @@
       "name": "Projects",
       "image": "directory.png"
     },
+    "writing": {
+      "id": "writing",
+      "name": "Writing",
+      "image": "directory.png"
+    },
     "documents": {
       "id": "documents",
       "name": "Documents",
@@ -72,7 +77,7 @@
         "subtitle": "Software Engineer",
         "startDate": "6/24/2019",
         "endDate": "Today",
-        "description": "I am currently working on very interesting things with the Unified Shell team in Adobe's Digital Experience Cloud.",
+        "description": "I'm currently working with a platform team within Adobe Experience Cloud to incrementally improve upon and expand the features of our framework used by dozens of Experience Cloud applications.",
         "link": "",
         "github": "",
         "website": "https://www.adobe.com/"
@@ -170,109 +175,57 @@
         "github": "https://github.com/brendacs/desktop-update",
         "website": "https://brendacs.github.io/desktop-update"
       },
-      "brendacs": {
-        "id": "brendacs",
-        "name": "brendacs.dev",
+      "cschwebsite": {
+        "id": "cschwebsite",
+        "name": "CSCH Website.js",
         "image": "file.png",
-        "heading": "brendacs.dev",
-        "subtitle": "Vue",
-        "startDate": "3/11/2019",
+        "heading": "CSCH Website.js",
+        "subtitle": "Next.js, Node",
+        "startDate": "5/1/2017",
         "endDate": "Today",
-        "description": "This is my more minimal personal website, which doubles as a blog! Visit to learn a bit more about each project and about me.",
+        "description": "Website based on Next.js for the CS Career Hub nonprofit, which connects a community of software engineers on a mission of lifelong-learning with peers, mentors, and mock interviewers.",
         "link": "",
-        "github": "https://github.com/brendacs/me",
-        "website": "https://brendacs.dev"
+        "github": "https://github.com/cscareerhub/csch-web",
+        "website": "cscareerhub.com"
       },
-      "colludia": {
-        "id": "colludia",
-        "name": "Colludia.js",
+      "cschmegabot": {
+        "id": "cschmegabot",
+        "name": "CSCH Megabot.js",
         "image": "file.png",
-        "heading": "Colludia.js",
-        "subtitle": "Jekyll, JS",
+        "heading": "CS Career Hub.js",
+        "subtitle": "Next.js, Node",
+        "startDate": "12/4/2020",
+        "endDate": "Today",
+        "description": "A megabot for everything CS Career Hub needs, created with Discord.js",
+        "link": "",
+        "github": "https://github.com/cscareerhub/megabot",
+        "website": "cscareerhub.com"
+      },
+      "indiestorygames": {
+        "id": "indiestorygames",
+        "name": "Indie Story Games.js",
+        "image": "file.png",
+        "heading": "Indie Story Games.js",
+        "subtitle": "Gatsby, Node",
         "startDate": "2/23/2020",
         "endDate": "Today",
-        "description": "A game blog prioritizing niche indie games, while also shining light on the indie developers behind them all.",
+        "description": "Indie Story Games is an indie gaming website focused on games with a story to tell and the developers behind them. I wear multiple hats and lead technological development, growth, and publishing. With a global team of writers, editors, and indie game enthusiasts, I hope to grow into our vision of becoming the definitive site for story-rich indie games.",
         "link": "",
-        "github": "https://github.com/brendacs/colludia",
-        "website": "https://colludia.com"
+        "github": "https://github.com/brendacs/colludia-gatsby",
+        "website": "https://indiestorygames.com"
       },
       "stopbot": {
         "id": "stopbot",
         "name": "Discord Stop Bot.js",
         "image": "file.png",
         "heading": "Discord Stop Bot.js",
-        "subtitle": "Node.js, PostgreSQL, Discord.js",
+        "subtitle": "Node, PostgreSQL, Discord.js",
         "startDate": "6/1/2017",
         "endDate": "Today",
         "description": "Stop Bot is a message moderation bot for Discord. Though it began as a joke between friends, I quickly realized it had the potential to be really useful for others and developed it into a general message moderation bot. Currently, it is active in over 2,000 Discord servers with 90,000+ users.",
         "link": "",
         "github": "https://github.com/brendacs/stop-bot",
         "website": "https://brendacs.github.io/stop-bot/"
-      },
-      "da": {
-        "id": "da",
-        "name": "Devil's Advocate.html",
-        "image": "file.png",
-        "heading": "Devil's Advocate.html",
-        "subtitle": "HTML, CSS, jQuery, Node.js",
-        "startDate": "12/15/2017",
-        "endDate": "3/1/2018",
-        "description": "This project by Jeffrey Webb was a weekly newsletter that sent political articles that subscribers would disagree with in order to foster more open-minded dialog. I built a website for hosting the survey, blog, and social media integrations along with a backend for automatically categorizing subscribers and assigning MailChimp tags based on survey answers.",
-        "link": "",
-        "github": "https://github.com/brendacs/devils-advocate",
-        "website": "https://getdevilsadvocate.com/"
-      },
-      "refero": {
-        "id": "refero",
-        "name": "Referobot.js",
-        "image": "file.png",
-        "heading": "Referobot.js",
-        "subtitle": "Node.js, Discord.js",
-        "startDate": "12/20/2017",
-        "endDate": "1/15/2017",
-        "description": "A referral bot for referral-based Discord servers. It counts and displays the number of invites each user has, their current rank, the number of invites until their next rank, and the name of a user's next rank. It also shows the top 10 ranking referrers.",
-        "link": "",
-        "github": "https://github.com/brendacs/Referobot",
-        "website": ""
-      },
-      "liquefy": {
-        "id": "liquefy",
-        "name": "Liquefy Web App.js",
-        "image": "file.png",
-        "heading": "Liquefy Web App.js",
-        "subtitle": "React",
-        "startDate": "8/15/2016",
-        "endDate": "8/30/2016",
-        "description": "Liquid language filtering app for non-technical Registria staff. Input any block of code with Liquid templating, and it’ll filter it for the Liquid snippets. The results are searchable by Liquid tags.",
-        "link": "",
-        "github": "https://github.com/Registria/Liquefy",
-        "website": ""
-      },
-      "rolley": {
-        "id": "rolley",
-        "name": "Rolley.py",
-        "image": "file.png",
-        "heading": "Rolley.py",
-        "subtitle": "Node.js, Discord.js",
-        "startDate": "5/17/2018",
-        "endDate": "12/28/2018",
-        "description": "A Python-based role management bot for Discord, where members of a server use emoji reacts to self-assign roles.",
-        "link": "",
-        "github": "https://github.com/brendacs/rolley-py",
-        "website": ""
-      },
-      "csch": {
-        "id": "csch",
-        "name": "CS Career Hackers.html",
-        "image": "file.png",
-        "heading": "CS Career Hackers.html",
-        "subtitle": "Jekyll, HTML, SCSS, JS",
-        "startDate": "5/1/2017",
-        "endDate": "7/25/2017",
-        "description": "A revamped website built with Jekyll for the CS Career Hackers nonprofit, which connects a community of software engineers on a mission of lifelong-learning with peers, mentors, and mock interviewers.",
-        "link": "",
-        "github": "https://github.com/brendacs/csch",
-        "website": "cscareerhackers.org"
       },
       "perks": {
         "id": "perks",
@@ -287,18 +240,57 @@
         "github": "https://github.com/brendacs/perks",
         "website": "https://brendacs.github.io/perks"
       },
-      "news": {
-        "id": "news",
-        "name": "Newsworthy Tab.css",
+      "rolley": {
+        "id": "rolley",
+        "name": "Rolley.py",
         "image": "file.png",
-        "heading": "Newsworthy Tab.css",
-        "subtitle": "HTML, CSS, jQuery",
-        "startDate": "3/28/2017",
-        "endDate": "3/31/2017",
-        "description": "This one is a little embarrassing since I built it when I was first learning how to code, but we all start somewhere. I tried my hand at building a Chrome extension, a new tab page. This custom new tab has a to-do list, weather, and top news articles of the day.",
+        "heading": "Rolley.py",
+        "subtitle": "Node, Discord.js",
+        "startDate": "5/17/2018",
+        "endDate": "12/28/2018",
+        "description": "A Python-based role management bot for Discord, where members of a server use emoji reacts to self-assign roles.",
         "link": "",
-        "github": "https://github.com/brendacs/newsworthy-tab",
-        "website": "https://chrome.google.com/webstore/detail/newsworthy-new-tab/cchbijaebfampphbbmjmlkchojhnlloj"
+        "github": "https://github.com/brendacs/rolley-py",
+        "website": ""
+      },
+      "refero": {
+        "id": "refero",
+        "name": "Referobot.js",
+        "image": "file.png",
+        "heading": "Referobot.js",
+        "subtitle": "Node, Discord.js",
+        "startDate": "12/20/2017",
+        "endDate": "1/15/2017",
+        "description": "A referral bot for referral-based Discord servers. It counts and displays the number of invites each user has, their current rank, the number of invites until their next rank, and the name of a user's next rank. It also shows the top 10 ranking referrers.",
+        "link": "",
+        "github": "https://github.com/brendacs/Referobot",
+        "website": ""
+      },
+      "da": {
+        "id": "da",
+        "name": "Devil's Advocate.html",
+        "image": "file.png",
+        "heading": "Devil's Advocate.html",
+        "subtitle": "HTML, CSS, jQuery, Node",
+        "startDate": "12/15/2017",
+        "endDate": "3/1/2018",
+        "description": "This project by Jeffrey Webb was a weekly newsletter that sent political articles that subscribers would disagree with in order to foster more open-minded dialog. I built a website for hosting the survey, blog, and social media integrations along with a backend for automatically categorizing subscribers and assigning MailChimp tags based on survey answers.",
+        "link": "",
+        "github": "https://github.com/brendacs/devils-advocate",
+        "website": "https://getdevilsadvocate.com/"
+      },
+      "liquefy": {
+        "id": "liquefy",
+        "name": "Liquefy Web App.js",
+        "image": "file.png",
+        "heading": "Liquefy Web App.js",
+        "subtitle": "React",
+        "startDate": "8/15/2016",
+        "endDate": "8/30/2016",
+        "description": "Liquid language filtering app for non-technical Registria staff. Input any block of code with Liquid templating, and it’ll filter it for the Liquid snippets. The results are searchable by Liquid tags.",
+        "link": "",
+        "github": "https://github.com/Registria/Liquefy",
+        "website": ""
       }
     },
     "documents": {
@@ -314,32 +306,6 @@
         "link": "Resume.pdf",
         "github": "",
         "website": ""
-      },
-      "about": {
-        "id": "about",
-        "name": "About.pdf",
-        "image": "pdf-file.png",
-        "heading": "About.pdf",
-        "subtitle": "PDF file — 108 KB",
-        "startDate": "3/11/2019",
-        "endDate": "Today",
-        "description": "This is my more minimal personal website, which doubles as a blog! Visit to learn a bit more about each project and about me.",
-        "link": "",
-        "github": "https://github.com/brendacs/me",
-        "website": "https://brendacs.dev"
-      },
-      "monkmode": {
-        "id": "monkmode",
-        "name": "Monk Mode.pdf",
-        "image": "pdf-file.png",
-        "heading": "Monk Mode.pdf",
-        "subtitle": "PDF file — 389 KB",
-        "startDate": "2/23/2020",
-        "endDate": "Today",
-        "description": "No one likes you when you're 23, right? So why not make this year—the new decade of 2020—the year I engage in the three I's? That is, introspection, isolation, and improvement. Join me on the journey and follow my personal experiment by reading my ramblings and reflections. (No, this was not prompted by the pandemic, but I coincidentally started right before it hit hard.)",
-        "link": "",
-        "github": "",
-        "website": "https://www.notion.so/brendacs/Monk-Mode-881beac200734efd8d667f7bf20e211d"
       },
       "notion": {
         "id": "notion",
@@ -365,7 +331,61 @@
         "description": "Words, important words. I live by these.",
         "link": "Quotes.pdf",
         "github": "",
-        "website": ""
+        "website": "https://productivequotes.wordpress.com/"
+      }
+    },
+    "writing": {
+      "writingportfolio": {
+        "id": "writingportfolio",
+        "name": "Writing Portfolio.pdf",
+        "image": "pdf-file.png",
+        "heading": "Writing Portfolio.pdf",
+        "subtitle": "Notion",
+        "startDate": "3/1/2020",
+        "endDate": "Today",
+        "description": "A collection of all my writings, sorted by publisher and year.",
+        "link": "",
+        "github": "",
+        "website": "https://www.notion.so/brendacs/Writing-Portfolio-282f1177f2314f328c6531da9ec811af"
+      },
+      "bagogames": {
+        "id": "bagogames",
+        "name": "BagoGames.pdf",
+        "image": "pdf-file.png",
+        "heading": "BagoGames.pdf",
+        "subtitle": "Author Page",
+        "startDate": "2/28/2021",
+        "endDate": "Today",
+        "description": "My author profile on BagoGames.",
+        "link": "",
+        "github": "",
+        "website": "https://bagogames.com/author/blliteration/"
+      },
+      "composely": {
+        "id": "composely",
+        "name": "Composely.pdf",
+        "image": "pdf-file.png",
+        "heading": "Composely.pdf",
+        "subtitle": "Website",
+        "startDate": "2/25/2021",
+        "endDate": "Today",
+        "description": "I am currently a freelance writer, specializing in finance and technology, on Composely.",
+        "link": "",
+        "github": "",
+        "website": "https://indiestorygames.com/author/brenda/"
+      },
+      "indiestorygames": {
+        "id": "indiestorygames",
+        "name": "Indie Story Games.pdf",
+        "image": "pdf-file.png",
+        "heading": "Indie Story Games.pdf",
+        "subtitle": "Author Page",
+        "startDate": "3/1/2020",
+        "endDate": "Today",
+        "description": "My author profile on Indie Story Games.",
+        "link": "",
+        "github": "",
+        "website": "https://indiestorygames.com/author/brenda/"
       }
     }
   }

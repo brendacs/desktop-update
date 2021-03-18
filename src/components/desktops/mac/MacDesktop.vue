@@ -34,7 +34,7 @@ export default {
       },
       currentApp: null,
       currentFolder: 'Education',
-      folders: ['Education', 'Experience', 'Projects', 'Documents'],
+      folders: ['Education', 'Experience', 'Projects', 'Writing', 'Documents'],
       openedFromDesktop: false
     }
   },
