@@ -374,6 +374,19 @@
         "github": "",
         "website": "https://indiestorygames.com/author/brenda/"
       },
+      "gbr": {
+        "id": "gbr",
+        "name": "GOBankingRates.pdf",
+        "image": "pdf-file.png",
+        "heading": "GOBankingRates.pdf",
+        "subtitle": "Author Page",
+        "startDate": "2/25/2020",
+        "endDate": "Today",
+        "description": "My author profile on GOBankingRates.",
+        "link": "",
+        "github": "",
+        "website": "https://www.gobankingrates.com/author/bzhang/"
+      },
       "indiestorygames": {
         "id": "indiestorygames",
         "name": "Indie Story Games.pdf",
