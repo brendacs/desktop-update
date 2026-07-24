@@ -1,0 +1,16 @@
+@import '../../../assets/scss/variables-mac';
+
+.terminal {
+  height: 100% !important;
+  min-height: 0 !important;
+  background: #000 !important;
+  border-radius: 0 0 6px 6px;
+  padding: 8px !important;
+  box-sizing: border-box;
+
+  // react-console-emulator prompt label
+  span[class*='promptLabel'],
+  .terminal-prompt-label {
+    color: $folder-bright-blue !important;
+  }
+}

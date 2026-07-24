@@ -1,0 +1,26 @@
+@import '../../../assets/scss/variables-mac';
+
+.vscode-window {
+  width: 100%;
+  height: 100%;
+  background-color: $vscode-light;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 5px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
