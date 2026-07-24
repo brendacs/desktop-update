@@ -16,8 +16,9 @@
   align-items: flex-end;
 }
 
-.dock {
+.dock-wrapper {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
 }

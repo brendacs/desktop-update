@@ -23,7 +23,7 @@ export default function VscodeApp() {
   }, [])
 
   return (
-    <div className="vscode-window">
+    <div className="vscode-app">
       <div className="sidebar">
         <button>
           <img src={filesIcon} alt="files" />
