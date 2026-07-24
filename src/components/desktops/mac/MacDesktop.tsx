@@ -85,7 +85,10 @@ export default function MacDesktop() {
         <TerminalApp />
       </DraggableWindow>
       <div className="dock-wrapper">
-        <DesktopDock apps={Object.values(apps)} onIconClick={openApp} />
+        <DesktopDock
+          apps={[apps.finder, apps.terminal, apps.vscode]}
+          onIconClick={openApp}
+        />
       </div>
     </div>
   )
