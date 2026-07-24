@@ -1,4 +1,5 @@
-@import '../../../../assets/scss/variables-mac', '../../../../assets/scss/mixins';
+@use '../../../../assets/scss/variables-mac' as *;
+@use '../../../../assets/scss/mixins' as *;
 
 .dock-icon-container {
   height: 50px;

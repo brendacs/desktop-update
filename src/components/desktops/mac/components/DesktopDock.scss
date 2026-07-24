@@ -1,4 +1,4 @@
-@import '../../../../assets/scss/variables-mac', '../../../../assets/scss/mixins';
+@use '../../../../assets/scss/variables-mac' as *;
 
 .dock {
   height: 60px;

@@ -1,4 +1,5 @@
-@import '../../../assets/scss/variables-mac';
+@use '../../../assets/scss/variables-mac' as *;
+@use 'sass:color';
 
 .user-wrapper {
   display: flex;
@@ -40,10 +41,10 @@
 }
 
 .link {
-  color: darken($folder-bright-blue, 5%);
+  color: color.adjust($folder-bright-blue, $lightness: -5%);
 
   &:hover {
-    color: darken($folder-bright-blue, 25%);
+    color: color.adjust($folder-bright-blue, $lightness: -25%);
   }
 }
 

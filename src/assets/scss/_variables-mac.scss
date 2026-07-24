@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // general
 $general-font-color: #fff;
 $mac-gray: rgba(215, 215, 215, 1);
@@ -6,7 +8,7 @@ $mac-gray: rgba(215, 215, 215, 1);
 $mac-label-color: #cbcdcc;
 $mac-label-font-color: #000;
 $mac-highlight-color: rgba(179, 216, 253, 0.4);
-$mac-highlight-color-dark: darken($mac-highlight-color, 15%);
+$mac-highlight-color-dark: color.adjust($mac-highlight-color, $lightness: -15%);
 
 // windows
 $window-background: #fff;
@@ -24,7 +26,7 @@ $mac-expand-button-border: rgba(43, 185, 65, 1);
 
 // finder
 $finder-text-font-color: #000;
-$folder-bright-blue: darken(#76d2fb, 25%);
+$folder-bright-blue: color.adjust(#76d2fb, $lightness: -25%);
 
 $vscode-dark: rgb(30, 31, 28);
 $vscode-light: rgb(39, 40, 34);

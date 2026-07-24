@@ -1,4 +1,5 @@
-@import '../../../../assets/scss/variables-mac';
+@use '../../../../assets/scss/variables-mac' as *;
+@use 'sass:color';
 
 /* finder items */
 .finder-item-container {
@@ -37,7 +38,7 @@
   span {
     transform: rotate(90deg);
     font-size: 8px;
-    color: darken($mac-gray, 25%);
+    color: color.adjust($mac-gray, $lightness: -25%);
   }
 }
 

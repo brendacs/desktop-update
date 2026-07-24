@@ -1,4 +1,5 @@
-@import '../../../../assets/scss/variables-mac';
+@use '../../../../assets/scss/variables-mac' as *;
+@use 'sass:color';
 
 .finder-selected-item {
   display: flex;
@@ -43,22 +44,22 @@
 }
 
 a.finder-link {
-  color: darken($folder-bright-blue, 5%);
+  color: color.adjust($folder-bright-blue, $lightness: -5%);
   transition: all 0.15s ease;
 }
 
 a.finder-link:hover {
-  color: darken($folder-bright-blue, 25%);
+  color: color.adjust($folder-bright-blue, $lightness: -25%);
 }
 
 .item-heading {
   width: 100%;
-  border-bottom: 1px solid darken($mac-gray, 15%);
+  border-bottom: 1px solid color.adjust($mac-gray, $lightness: -15%);
   padding-bottom: 8px;
   margin-bottom: 8px;
 
   .subtitle {
-    color: darken($mac-gray, 15%);
+    color: color.adjust($mac-gray, $lightness: -15%);
   }
 }
 
@@ -83,7 +84,7 @@ a.finder-link:hover {
 
   p:first-child {
     margin-right: 20px;
-    color: darken($mac-gray, 15%);
+    color: color.adjust($mac-gray, $lightness: -15%);
   }
 
   p:last-child {

@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables-mac', '../../assets/scss/mixins';
+@use '../../assets/scss/variables-mac' as *;
+@use 'sass:color';
 
 .window-nav {
   border-radius: 5px 5px 0 0;
@@ -39,33 +40,33 @@
   .button-close {
     background-color: $mac-close-button;
     border: 1px solid $mac-close-button-border;
-    color: darken($mac-close-button, 45%);
+    color: color.adjust($mac-close-button, $lightness: -45%);
     transition: all 0.2s ease;
 
     &:hover {
-      background-color: darken($mac-close-button, 15%);
+      background-color: color.adjust($mac-close-button, $lightness: -15%);
     }
   }
 
   .button-min {
     background-color: $mac-min-button;
     border: 1px solid $mac-min-button-border;
-    color: darken($mac-min-button, 45%);
+    color: color.adjust($mac-min-button, $lightness: -45%);
     transition: all 0.2s ease;
 
     &:hover {
-      background-color: darken($mac-min-button, 15%);
+      background-color: color.adjust($mac-min-button, $lightness: -15%);
     }
   }
 
   .button-expand {
     background-color: $mac-expand-button;
     border: 1px solid $mac-expand-button-border;
-    color: darken($mac-expand-button, 45%);
+    color: color.adjust($mac-expand-button, $lightness: -45%);
     transition: all 0.2s ease;
 
     &:hover {
-      background-color: darken($mac-expand-button, 5%);
+      background-color: color.adjust($mac-expand-button, $lightness: -5%);
     }
   }
 }

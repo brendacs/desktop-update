@@ -6,4 +6,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/desktop-update/',
   plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
 })

@@ -1,4 +1,4 @@
-@import '../../../../assets/scss/variables-mac';
+@use '../../../../assets/scss/variables-mac' as *;
 
 .editor {
   height: 100%;
